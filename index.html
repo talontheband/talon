@@ -3,23 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: black;
-      color: white;
-      font-family: Helvetica, Arial, sans-serif;
-      font-style: oblique;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-    }
-  </style>
+  <title>You Gotta Guess</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  coming soon...
+  <div class="message">
+    you gotta guess...<br />
+    how many bracelets on my wrist?
+    
+    <br />
+    <img src="bracelet-photo.jpg" alt="Bracelets Photo" class="bracelet-photo" />
+    <br />
+    
+    <button class="guess-button" onclick="showInput()">Make a Guess</button>
+
+    <div id="guess-input-container" class="hidden">
+      <input type="number" id="guess-input" placeholder="Enter a number..." />
+      <br />
+      <button onclick="submitGuess()">Submit</button>
+      <p id="feedback"></p>
+    </div>
+
+    <div id="animation" class="hidden">
+      <img src="correct.gif" alt="Celebration GIF" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <audio id="background-audio" loop>
+    <source src="bracelets.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="mute-button" class="hidden">🔈</button>
+
+  <div id="song-link">
+    <a href="https://distrokid.com/hyperfollow/talon10/bracelets" target="_blank">stream bracelets by talon</a>
+  </div>
+
+  <div id="final-screen" class="hidden">
+    <a href="https://distrokid.com/hyperfollow/talon10/bracelets" target="_blank">stream bracelets by talon</a>
+  </div>
+
 </body>
 </html>
