@@ -1,0 +1,175 @@
+/* Base page styling */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+.message {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+/* Button styling */
+.guess-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.guess-button:hover {
+  background-color: #ddd;
+}
+
+/* Input container */
+#guess-input-container {
+  margin-top: 1rem;
+}
+
+/* Input field */
+input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  margin-right: 0.5rem;
+  width: 200px;
+}
+
+/* Feedback message */
+#feedback {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Animation container */
+#animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+#animation.show {
+  opacity: 1;
+}
+
+#animation img {
+  max-width: 100vw;
+  max-height: 100vh;
+  border: none;
+  box-shadow: none;
+}
+
+#mute-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  transition: background 0.3s ease;
+}
+
+#mute-button:hover {
+  background-color: #ccc;
+}
+
+#song-link {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.9rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+}
+
+#song-link a {
+  color: white;
+  text-decoration: none;
+}
+
+#song-link a:hover {
+  text-decoration: underline;
+}
+
+#final-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: 10000;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+#final-screen a {
+  color: red;
+  font-size: 5rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  text-align: center;
+  text-decoration: none;
+}
+
+#final-screen a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  #final-screen a {
+    font-size: 2rem;
+  }
+}
+
+#guess-input-container input,
+#guess-input-container button {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.bracelet-photo {
+  max-width: 30%;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
